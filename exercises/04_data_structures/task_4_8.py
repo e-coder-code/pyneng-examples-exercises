@@ -19,3 +19,11 @@
 '''
 
 ip = '192.168.3.1'
+ip_list = [ int(num) for num in ip.split('.') ]
+
+template = """
+{0:<8}  {1:<8}  {2:<8}  {3:<8}
+{0:08b}  {1:08b}  {2:08b}  {3:08b} 
+"""
+print(template.format(*ip_list))
+
