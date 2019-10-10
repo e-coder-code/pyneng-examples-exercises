@@ -12,4 +12,8 @@
 '''
 
 mac = ['aabb:cc80:7000', 'aabb:dd80:7340', 'aabb:ee80:7000', 'aabb:ff80:7000']
+replacement = lambda string: string.replace(':', '.')
+mac_cisco = list(map(replacement, mac))
+print(mac_cisco)
+
 
