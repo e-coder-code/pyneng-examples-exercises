@@ -9,3 +9,6 @@
 '''
 
 mac = 'AAAA:BBBB:CCCC'
+replacement = lambda string: string.replace(':', '.')
+print(replacement(mac))
+
