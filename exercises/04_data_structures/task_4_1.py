@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 '''
 Задание 4.1
 
@@ -12,4 +13,7 @@
 nat = 'ip nat inside source list ACL interface FastEthernet0/1 overload'
 replacement = lambda string: string.replace('Fast', 'Gigabit')
 print(replacement(nat))
+
+match = re.sub('Fast', 'Gigabit', nat)
+print(match)
 
