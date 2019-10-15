@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 '''
 Задание 4.2
 
@@ -11,4 +12,7 @@
 mac = 'AAAA:BBBB:CCCC'
 replacement = lambda string: string.replace(':', '.')
 print(replacement(mac))
+
+match = re.sub(':', '.', mac)
+print(match)
 
