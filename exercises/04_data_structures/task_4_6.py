@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 '''
 Задание 4.6
 
@@ -27,4 +28,16 @@ Last update:           {l_up.rstrip(',')}
 Outbound Interface:    {intf}
 """
 )
+
+ospf_template = """
+Protocol:              {}SPF
+Prefix:                {}
+AD/Metric:             {}
+Next-Hop:              {}
+Last update:           {}
+Outbound Interface:    {}
+"""
+ospf = re.split(r'(?:via|[ ,\[\]])+', ospf_route)
+
+print(ospf_template.format(*ospf))
 
