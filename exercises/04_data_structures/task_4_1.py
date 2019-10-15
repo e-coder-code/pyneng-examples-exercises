@@ -11,8 +11,8 @@ import re
 '''
 
 nat = 'ip nat inside source list ACL interface FastEthernet0/1 overload'
-replacement = lambda string: string.replace('Fast', 'Gigabit')
-print(replacement(nat))
+replace_nat = lambda string: string.replace('Fast', 'Gigabit')
+print(replace_nat(nat))
 
 match = re.sub('Fast', 'Gigabit', nat)
 print(match)
